@@ -1,0 +1,194 @@
+body {
+    background-color: #121212; /* Темный фон страницы */
+    color: #ffffff; /* Белый цвет текста для лучшей читаемости */
+    font-family: Arial, sans-serif; /* Шрифт страницы */
+    margin: 0; /* Убираем отступы */
+    padding: 0; /* Убираем отступы */
+}
+
+.container {
+    max-width: 100%; /* Максимальная ширина 100% для контейнера */
+    margin: 0 auto; /* Центрируем контейнер */
+    padding: 10px; /* Уменьшен внутренний отступ */
+    overflow-x: auto; /* Добавляем горизонтальную прокрутку, если необходимо */
+    height: auto; /* Высота будет автоматически подстраиваться под содержимое */
+}
+
+.scrollable-container {
+    background-color: #121212; /* Темный фон страницы */
+    width: 100%; /* Ширина 100% для контейнера прокрутки */
+    max-height: 719px; /* Ограничиваем высоту контейнера */
+    overflow-y: auto; /* Добавляем вертикальную прокрутку при необходимости */
+}
+
+table {
+    table-layout: fixed; /* Фиксированная ширина столбцов */
+    width: 100%; /* Ширина таблицы 100% */
+    max-width: 1500px; /* Максимальная ширина таблицы */
+    border-collapse: collapse; /* Убираем пробелы между ячейками */
+    color: #ffffff; /* Цвет текста в таблице */
+    margin-bottom: 10px; /* Отступ снизу таблицы */
+}
+
+th, td {
+    padding: 12px; /* Отступы в ячейках */
+    text-align: center; /* Выравнивание текста по центру */
+    border: 1px solid #333333; /* Рамка для ячеек */
+    transition: border-color 0.3s ease; /* Плавный переход цвета рамки */
+    word-wrap: break-word; /* Перенос слов на новую строку */
+    white-space: normal; /* Разрешить перенос строк */
+}
+
+th {
+    background-color: #1f1f1f; /* Фон заголовков таблицы */
+    color: #ffffff; /* Цвет текста заголовков */
+}
+
+/* Стиль для ячеек при фокусе */
+td:focus-within {
+    outline: 1px solid #6200ea; /* Подсветка ячейки при фокусе */
+    outline-offset: -2px; /* Сдвиг рамки внутрь */
+    box-shadow: 0 0 5px rgba(98, 0, 234, 0.5); /* Эффект тени для выделения */
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%; /* Полная ширина полей ввода */
+    padding: 10px; /* Отступы внутри полей */
+    background-color: #1f1f1f; /* Темный фон полей ввода */
+    color: #ffffff; /* Цвет текста в полях ввода */
+    border: none; /* Убираем границу */
+    text-align: right; /* Выравнивание текста вправо */
+    outline: none; /* Убираем стандартное выделение */
+}
+
+/* Подсветка поля ввода при фокусе */
+input[type="text"]:focus, input[type="number"]:focus {
+    outline: none; /* Убираем стандартное выделение */
+    border-bottom: 2px solid #6200ea; /* Подсветка нижней границы */
+}
+
+button {
+    background-color: #6200ea; /* Основной цвет кнопок */
+    color: #fff; /* Цвет текста кнопок */
+    padding: 8px 16px; /* Отступы кнопок */
+    border: none; /* Убираем границу */
+    cursor: pointer; /* Указатель при наведении */
+}
+
+/* Эффект наведения на кнопки */
+button:hover {
+    background-color: #3700b3; /* Цвет кнопок при наведении */
+}
+
+#clear-btn, #add-row-btn {
+    background-color: #333333; /* Цвет кнопок очистки и добавления строки */
+    border: 2px solid #6200ea; /* Граница кнопок */
+    color: white; /* Цвет текста кнопок */
+    margin-top: 5px; /* Отступ сверху */
+    padding: 8px 16px; /* Отступы кнопок */
+}
+
+#unit-economy-table input {
+    width: 100%; /* Поля ввода занимают полную ширину столбца */
+    box-sizing: border-box; /* Учет отступов и границ в ширине */
+    border: none; /* Убираем границу */
+    background-color: #171717; /* Темный фон полей ввода в таблице */
+    color: #ffffff; /* Цвет текста в полях ввода */
+    padding: 10px; /* Отступы внутри полей */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+#unit-economy-table select {
+    width: 100%; /* Полная ширина для селектов */
+    padding: 10px; /* Отступы внутри селектов */
+    background-color: #171717; /* Темный фон для селектов */
+    color: #ffffff; /* Цвет текста в селектах */
+    border: none; /* Убираем границу */
+}
+
+#unit-economy-table tbody tr {
+    line-height: 1.2em; /* Высота строк */
+    height: 35px; /* Уменьшает высоту строк */
+}
+
+.button-container {
+    margin-bottom: 10px; /* Отступ снизу между кнопками и таблицей */
+    display: flex; /* Используем flexbox для выравнивания кнопок */
+    justify-content: flex-start; /* Выравнивание кнопок по левому краю */
+}
+
+.button-container button {
+    margin-right: 10px; /* Отступ между кнопками */
+}
+
+body.dark-mode {
+    --version-text: #666666; /* Цвет текста для темного режима */
+    --version-bg: rgba(0, 0, 0, 0.8); /* Цвет фона для темного режима */
+}
+
+/* Стили для отображения версии */
+.version {
+    position: fixed; /* Фиксированное положение для версии */
+    bottom: 10px; /* Отступ от низа */
+    right: 10px; /* Отступ от правого края */
+    font-size: 12px; /* Размер текста для версии */
+    color: var(--version-text); /* Цвет текста версии */
+    background: var(--version-bg); /* Цвет фона версии */
+    padding: 5px 10px; /* Отступы вокруг текста */
+    border-radius: 3px; /* Скругление углов */
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1); /* Тень для блока версии */
+    z-index: 1000; /* Уровень слоя для отображения версии над другими элементами */
+}
+
+/* Ширина столбцов для таблицы */
+.column-width-1 { width: 25px; }  /* Для столбца с номером */
+.column-width-2 { width: 223px; } /* Для столбца SKU */
+.column-width-3 { width: 110px; } /* Для столбца ШК */
+.column-width-4 { width: 303px; } /* Для столбца Наименование товара */
+.column-width-5 { width: 95px; } /* Для столбца Закупочная стоимость */
+.column-width-6 { width: 85px; } /* Для столбца Расходы на логистику */
+.column-width-7 { width: 85px; } /* Для столбца Расходы на упаковку */
+.column-width-8 { width: 125px; } /* Для столбца Себестоимость товара */
+.column-width-9 { width: 90px; } /* Для столбца Стоимость к выводу */
+.column-width-10 { width: 85px; } /* Для столбца Чистая прибыль */
+.column-width-11 { width: 75px; } /* Для столбца Наценка в % */
+.column-width-12 { width: 100px; } /* Для столбца Маржинальность */
+.column-width-13 { width: 85px; } /* Для столбца Цена продажи */
+.column-width-14 { width: 100px; } /* Для столбца Минимальная скидка */
+.column-width-15 { width: 105px; } /* Для столбца Изначальная цена */
+.column-width-16 { width: 70px; } /* Для столбца Скидка */
+.column-width-17 { width: 100px; } /* Для столбца Цена продажи */
+.column-width-18 { width: 105px; } /* Для столбца Скидка для изначальной цены */
+.column-width-19 { width: 150px; } /* Для столбца Категория товара */
+.column-width-20 { width: 100px; } /* Для столбца Комиссия Uzum */
+.column-width-21 { width: 210px; } /* Для столбца Габаритная группа */
+.column-width-22 { width: 85px; } /* Для столбца Логистический сбор */
+
+
+input[readonly] {
+    background-color: #29005E !important; /* Тёмный фон для выделения */
+    color: #fff !important; /* Белый цвет текста для контраста */
+    opacity: 0.7 !important; /* Прозрачность для эффекта недоступности */
+}
+
+
+
+        .footer-text {
+            position: fixed; /* Фиксированное положение */
+            bottom: 10px; /* Отступ от низа */
+            left: 50%; /* Центрирование по горизонтали */
+            transform: translateX(-50%); /* Сдвиг для центрирования */
+            font-size: 12px; /* Размер текста */
+            color: white; /* Цвет текста */
+            background: rgba(0, 0, 0, 0.7); /* Цвет фона с прозрачностью */
+            padding: 5px 10px; /* Отступы вокруг текста */
+            border-radius: 3px; /* Скругление углов */
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.1); /* Тень для блока */
+            z-index: 1000; /* Уровень слоя */
+            text-align: center; /* Центрирование текста */
+        }
+
+
+
+
+
